@@ -1,0 +1,360 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<style>
+
+.ventana{
+
+  background-color:aqua;
+
+  width:300px;
+
+  padding: 10px 20px;
+
+  margin: 20% auto;
+
+  position: relative;
+
+}
+
+.modal{
+
+  background-color: rgba(0,0,0,.8);
+
+  position:fixed;
+
+  top:-250px;
+
+  right:0;
+
+  bottom:0;
+
+  left:0;
+
+  opacity:0;
+
+  pointer-events:none;
+
+  transition: all 1s;
+
+}
+.save{
+
+  position:static;
+
+  top:0px;
+
+  right:0;
+
+  bottom:0;
+
+  left:1;
+
+  opacity:100;
+
+
+
+}
+
+
+
+#settings:target{
+
+  opacity:1;
+
+  pointer-events:auto;
+
+}
+
+.opcion{/*width: 100px;
+
+        background-color:yellow;
+
+border:1px solid black;*/}
+
+
+
+</style>
+
+<script>
+
+
+                let colorWell;
+const defaultColor = "#0000ff";
+
+window.addEventListener("load", startup, false);
+
+function startup() {
+  colorWell = document.querySelector("#colorWell");
+  colorWell.value = defaultColor;
+  colorWell.addEventListener("input", updateFirst, false);
+  colorWell.addEventListener("change", updateAll, false);
+  colorWell.select();
+}
+
+function updateFirst(event) {
+  const dd = document.querySelector("dd");
+  if (dd) {
+    p.style.color = event.target.value;
+  }
+}
+
+function updateAll(event) {
+  document.querySelectorAll("dd").forEach((dd) => {
+    dd.style.color = event.target.value;
+  });
+}
+
+            
+
+
+function scroll1() {
+
+  var chk=document.getElementById("scroll").value;
+  el.scrollTop = 1;
+
+}
+
+function lista() {
+  var x = document.getElementById("texto1").value;
+  document.getElementById("linea1").innerHTML = x;
+  
+  var x = document.getElementById("texto2").value;
+  document.getElementById("linea2").innerHTML = x;
+  
+  var x = document.getElementById("texto3").value;
+  document.getElementById("linea3").innerHTML = x;
+  
+  var x = document.getElementById("texto4").value;
+  document.getElementById("linea4").innerHTML = x;
+  
+  var x = document.getElementById("texto5").value;
+  document.getElementById("linea5").innerHTML = x;
+  
+  var x = document.getElementById("texto6").value;
+  document.getElementById("linea6").innerHTML = x;
+  
+  var x = document.getElementById("texto7").value;
+  document.getElementById("linea7").innerHTML = x;
+  
+  var x = document.getElementById("texto8").value;
+  document.getElementById("linea8").innerHTML = x;
+  
+  var x = document.getElementById("texto9").value;
+  document.getElementById("linea9").innerHTML = x;
+  
+  var x = document.getElementById("texto10").value;
+  document.getElementById("linea10").innerHTML = x;
+  
+  var x = document.getElementById("texto11").value;
+  document.getElementById("linea11").innerHTML = x;
+  
+  var x = document.getElementById("texto12").value;
+  document.getElementById("linea12").innerHTML = x;
+  
+  var x = document.getElementById("texto13").value;
+  document.getElementById("linea13").innerHTML = x;
+  
+  var x = document.getElementById("texto14").value;
+  document.getElementById("linea14").innerHTML = x;
+  
+  var x = document.getElementById("texto15").value;
+  document.getElementById("linea15").innerHTML = x;
+  
+  var x = document.getElementById("texto16").value;
+  document.getElementById("linea16").innerHTML = x;
+  
+  var x = document.getElementById("texto17").value;
+  document.getElementById("linea17").innerHTML = x;
+  
+  var x = document.getElementById("texto18").value;
+  document.getElementById("linea18").innerHTML = x;
+    
+  var x = document.getElementById("texto19").value;
+  document.getElementById("linea19").innerHTML = x;
+    
+  var x = document.getElementById("texto20").value;
+  document.getElementById("linea20").innerHTML = x;
+    
+  var x = document.getElementById("texto21").value;
+  document.getElementById("linea21").innerHTML = x;
+      
+  var x = document.getElementById("texto22").value;
+  document.getElementById("linea22").innerHTML = x;
+      
+  var x = document.getElementById("texto23").value;
+  document.getElementById("linea23").innerHTML = x;
+      
+  var x = document.getElementById("texto24").value;
+  document.getElementById("linea24").innerHTML = x;
+      
+  var x = document.getElementById("texto25").value;
+  document.getElementById("linea25").innerHTML = x;
+      
+  var x = document.getElementById("texto26").value;
+  document.getElementById("linea26").innerHTML = x;
+  
+  var x = document.getElementById("data").value;
+  document.getElementById("test").innerHTML = x;
+  
+  var x = document.getElementById("color-text").value;
+  document.getElementById("text-color").innerHTML = x;
+  
+}
+</script>
+<body>
+<table> 
+
+  <tr><td>
+  
+<marquee
+ behavior="scroll" direction="up" scrollamount="3">
+ <ul>
+  <div contenteditable id="texto-scroll"></a>
+  Anade la lista aqui
+  <br>
+  1
+  <br>
+  2
+  <br>
+  3
+  <br>
+  .
+  <br>
+  .
+  <br>
+  .
+  <br>
+  .
+   
+    
+    
+  </div>
+  </ul>
+</marquee>
+
+  </td><td>
+
+ </table>
+
+<div class="opcion"> 
+
+<a href="#settings">
+
+<button type="button">Ajustes</button>
+<br><br>
+</a>
+
+</div>
+
+
+
+<div id="settings" class="modal">
+
+  <div class="ventana">
+    <a href="#" style='text-decoration:none;'>
+
+    X
+
+    </a>
+    <h2>Ajustes</h2>
+
+    <p>Lista</p>
+	<input type="text" id="texto1" placeholder="Linea 1"></input>
+	<input type="text" id="texto2" placeholder="Linea 2"></input>
+	<input type="text" id="texto3" placeholder="Linea 3"></input>
+	<input type="text" id="texto4" placeholder="Linea 4"></input>
+	<input type="text" id="texto5" placeholder="Linea 5"></input>
+	<input type="text" id="texto6" placeholder="Linea 6"></input>
+	<input type="text" id="texto7" placeholder="Linea 7"></input>
+	<input type="text" id="texto8" placeholder="Linea 8"></input>
+	<input type="text" id="texto9" placeholder="Linea 9"></input>
+	<input type="text" id="texto10" placeholder="Linea 10"></input>
+	<input type="text" id="texto11" placeholder="Linea 11"></input>
+	<input type="text" id="texto12" placeholder="Linea 12"></input>
+	<input type="text" id="texto13" placeholder="Linea 13"></input>
+	<input type="text" id="texto14" placeholder="Linea 14"></input>
+	<input type="text" id="texto15" placeholder="Linea 15"></input>
+	<input type="text" id="texto16" placeholder="Linea 16"></input>
+	<input type="text" id="texto17" placeholder="Linea 17"></input>
+	<input type="text" id="texto18" placeholder="Linea 18"></input>
+	<input type="text" id="texto19" placeholder="Linea 19"></input>
+	<input type="text" id="texto20" placeholder="Linea 20"></input>
+	<input type="text" id="texto21" placeholder="Linea 21"></input>
+	<input type="text" id="texto22" placeholder="Linea 22"></input>
+	<input type="text" id="texto23" placeholder="Linea 23"></input>
+	<input type="text" id="texto24" placeholder="Linea 24"></input>
+	<input type="text" id="texto25" placeholder="Linea 25"></input>
+	<input type="text" id="texto26" placeholder="Linea 26"></input>
+	
+	<br><br>
+	
+	<label for="colorWell">Color:</label>
+	<l><input type="color" value="#000000" id="colorWell"></l>
+	<br><br>
+	<label><input type="checkbox" id="scroll" onclick="scroll1()" /> <a>Con movimiento ascendente</a></label>
+	<br><br>
+	<button onclick="lista()">Guardar</button>
+
+<p>Si lo usas con OBS recuerda que nunca recarge la página o se reiniciarán</p>
+<p>Ten por seguridad un bloc de notas con los usuarios y datos</p>
+
+  </div>  
+</div>
+<br> <br> <br>
+
+<marquee behavior="scroll" direction="up" scrollamount="3">
+<div class="lista">
+<!--
+Copia esto:
+
+<dd>Texto aqui</dd>
+
+-->
+   <ul>
+   <dd id="linea1"></></dd>
+	  <dd id="linea2"></></dd>
+	  <dd id="linea3"></></dd>
+	  <dd id="linea4"></></dd>
+	  <dd id="linea5"></></dd>
+	  <dd id="linea6"></></dd>
+	  <dd id="linea7"></></dd>
+	  <dd id="linea8"></></dd>
+	  <dd id="linea9"></></dd>
+	  <dd id="linea10"></></dd>
+	  <dd id="linea11"></></dd>
+	  <dd id="linea12"></></dd>
+	  <dd id="linea13"></></dd>
+	  <dd id="linea14"></></dd>
+	  <dd id="linea15"></></dd>
+	  <dd id="linea16"></></dd>
+	  <dd id="linea17"></></dd>
+	  <dd id="linea18"></></dd>
+	  <dd id="linea19"></></dd>
+	  <dd id="linea20"></></dd>
+	  <dd id="linea21"></></dd>
+	  <dd id="linea22"></></dd>
+	  <dd id="linea23"></></dd>
+	  <dd id="linea24"></></dd>
+	  <dd id="linea25"></></dd>
+	  <dd id="linea26"></></dd>
+	 
+	  <dd id="test"></></dd>
+	  <dd></dd>
+	  <dd></dd>
+	  <dd></dd>
+	  <dd></dd>
+	  <dd></dd>
+	  <dd></dd>
+	  <dd></dd>
+	  <dd></dd>
+	  <dd></dd>
+	  <dd></dd>
+	  
+	  <!-- ^^^ Los pones aqui ^^^ -->
+	  
+   </ul>
+</div>
+
+</marquee>
+</html>
+
